@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.cleanarchitecturegitsample.custom.CustomDialog
 import kotlin.math.cos
 
-class BaseActivity:AppCompatActivity() {
+open class BaseActivity:AppCompatActivity() {
     private lateinit var customLoadingDialog:CustomDialog
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
