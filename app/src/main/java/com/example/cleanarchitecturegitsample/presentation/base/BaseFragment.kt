@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.cleanarchitecturegitsample.custom.CustomDialog
 
-class BaseFragment:Fragment() {
+open class BaseFragment:Fragment() {
 
     private lateinit var customLoadingDialog:CustomDialog
 

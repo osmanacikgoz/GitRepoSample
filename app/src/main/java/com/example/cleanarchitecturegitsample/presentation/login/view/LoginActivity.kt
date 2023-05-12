@@ -7,6 +7,7 @@ import com.example.cleanarchitecturegitsample.databinding.ActivityLoginBinding
 import com.example.cleanarchitecturegitsample.presentation.base.BaseActivity
 import com.example.cleanarchitecturegitsample.presentation.login.viewmodel.LoginState
 import com.example.cleanarchitecturegitsample.presentation.login.viewmodel.LoginViewModel
+import com.example.cleanarchitecturegitsample.presentation.user_info.view.UserInfoActivity
 import org.koin.android.ext.android.inject
 
 class LoginActivity : BaseActivity() {

@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">CleanArchitectureGitSample</string>
+    <string name="redirection_failed">The network is not strong, please try again later</string>
+    <string name="account_hint">enter your username</string>
+    <string name="stared">start!</string>
+    <string name="exit_app">Press again to return to build and exit APP</string>
+    <string name="search">Enter the username to search for</string>
+    <string name="skip">skip</string>
+    <string name="no_search">No user found</string>
+    <string name="not_empty">do not leave blank</string>
+    <string name="search_other">search for other authors</string>
+    <string name="no_description">no description</string>
+    <string name="zero">0</string>
+
 </resources>
