@@ -6,8 +6,8 @@ import retrofit2.http.Path
 
 interface LoginServices {
 
-    @GET("user/{userName}")
+    @GET("users/{userName}")
     suspend fun getUser(
-        @Path("userName") userName:String
-    ):UserDto
+        @Path("userName") userName: String
+    ): UserDto
 }

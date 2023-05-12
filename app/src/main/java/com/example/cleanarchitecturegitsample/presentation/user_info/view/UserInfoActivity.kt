@@ -46,16 +46,14 @@ class UserInfoActivity : BaseActivity(), ReposAdapter.OnRepositoryClicked {
 
     private fun initView() {
         val loginName = intent.getStringExtra(LOGIN_NAME) ?: ""
-        val actionBar = binding.actionBar
-        actionBar.findViewById<TextView>(R.id.userName)
+
+
 
         reposAdapter = ReposAdapter(RepositoryItemCallback(), this)
         binding.apply {
             userInfoList.adapter = reposAdapter
-            showLoadingDialog()
         }
         userInfoViewModel.getRepos(loginName)
-
 
     }
 
@@ -72,21 +70,26 @@ class UserInfoActivity : BaseActivity(), ReposAdapter.OnRepositoryClicked {
                 }
                 else -> Unit
             }
-            dismissLoadingDialog()
         }
     }
 
 
     override fun onRepositoryClicked(position: Int) {
-        Bundle().putSerializable(
+
+        val bundle = Bundle()
+
+        bundle.putSerializable(
             RepositoryActivity.REPOSITORY,
             reposAdapter?.currentList?.get(position)
         )
-        Intent().putExtra(
-            RepositoryActivity.BUNDLE,
-            bundleOf()
-        )
-        startActivity(Intent().setClass(this, RepositoryActivity::class.java))
 
+        intent.putExtra(
+            RepositoryActivity.BUNDLE,
+            bundle
+        )
+
+        intent.setClass(this, RepositoryActivity::class.java)
+
+        startActivity(intent)
     }
 }

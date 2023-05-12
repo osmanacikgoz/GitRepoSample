@@ -45,8 +45,6 @@ class LoginActivity : BaseActivity() {
                 Toast.makeText(this, "Enter your username", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
-
-            showLoadingDialog()
             viewModel.getUser(userName)
         }
     }
@@ -64,15 +62,18 @@ class LoginActivity : BaseActivity() {
                 }
                 else -> Unit
             }
-            dismissLoadingDialog()
         }
     }
 
     private fun openUserInfoPage(loginName: String) {
         val intent = Intent()
+
         intent.putExtra(UserInfoActivity.LOGIN_NAME, loginName)
+
         intent.setClass(this, UserInfoActivity::class.java)
+
         startActivity(intent)
+
         finish()
     }
 

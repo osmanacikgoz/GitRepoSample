@@ -57,8 +57,6 @@ class CommitFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
-        showLoadingDialog()
-
         val userName = arguments?.getString(CollaboratorsFragment.USER_NAME) ?: ""
         val repoName = arguments?.getString(CollaboratorsFragment.REPO_NAME) ?: ""
 
@@ -86,7 +84,6 @@ class CommitFragment : BaseFragment() {
 
                 else -> Unit
             }
-            dismissLoadingDialog()
         }
     }
 }

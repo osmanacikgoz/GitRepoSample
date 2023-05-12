@@ -61,7 +61,6 @@ class CollaboratorsFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
-        showLoadingDialog()
 
         val userName = arguments?.getString(USER_NAME) ?: ""
         val repoName = arguments?.getString(REPO_NAME) ?: ""
@@ -91,7 +90,6 @@ class CollaboratorsFragment : BaseFragment() {
 
                 else->Unit
             }
-            dismissLoadingDialog()
         }
 
 

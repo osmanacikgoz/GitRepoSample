@@ -1,15 +1,18 @@
 package com.example.cleanarchitecturegitsample
 
-import android.content.Context
 import androidx.multidex.MultiDexApplication
+import com.example.cleanarchitecturegitsample.di.repositoryModule
+import com.example.cleanarchitecturegitsample.di.servicesModule
+import com.example.cleanarchitecturegitsample.di.useCaseModule
+import com.example.cleanarchitecturegitsample.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
-class GitApp:MultiDexApplication() {
+class GitApp : MultiDexApplication() {
 
     companion object {
-        lateinit var context:GitApp
-        private set
+        lateinit var context: GitApp
+            private set
     }
 
     override fun onCreate() {
@@ -18,7 +21,7 @@ class GitApp:MultiDexApplication() {
 
         startKoin {
             androidContext(this@GitApp)
-            modules(listOf())
+            modules(listOf(useCaseModule, repositoryModule, viewModelModule, servicesModule))
         }
     }
 }
