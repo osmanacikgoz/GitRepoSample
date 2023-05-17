@@ -1,6 +1,6 @@
 package com.example.cleanarchitecturegitsample.data.repository.user_info
 
-import com.anthony.net.sample.github.data.remote.dto.user_info.CollaboratorDto
+import com.example.cleanarchitecturegitsample.data.remote.dto.user_info.CollaboratorDto
 import com.anthony.net.sample.github.domain.entity.user_info.Collaborator
 import com.example.cleanarchitecturegitsample.data.remote.Resource
 import com.example.cleanarchitecturegitsample.data.remote.handleException

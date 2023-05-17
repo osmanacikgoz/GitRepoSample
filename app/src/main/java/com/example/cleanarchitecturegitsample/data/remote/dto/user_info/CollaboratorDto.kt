@@ -1,4 +1,4 @@
-package com.anthony.net.sample.github.data.remote.dto.user_info
+package com.example.cleanarchitecturegitsample.data.remote.dto.user_info
 
 import kotlinx.serialization.Serializable
 

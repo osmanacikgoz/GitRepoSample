@@ -46,9 +46,8 @@ class UserInfoActivity : BaseActivity(), ReposAdapter.OnRepositoryClicked {
 
     private fun initView() {
         val loginName = intent.getStringExtra(LOGIN_NAME) ?: ""
-
-
-
+        binding.userName.text = loginName
+        
         reposAdapter = ReposAdapter(RepositoryItemCallback(), this)
         binding.apply {
             userInfoList.adapter = reposAdapter
